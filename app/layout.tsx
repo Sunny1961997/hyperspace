@@ -17,14 +17,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
         {/* Add preload for critical assets */}
-        <link rel="preload" href="/hero-background.jpg" as="image" />
+        {/* <link rel="preload" href="/home_page_optimized.jpg" as="image" /> */}
       </head>
-      <body className={inter.className} suppressHydrationWarning>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
+      <body className={inter.className}>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           {children}
         </ThemeProvider>
       </body>
